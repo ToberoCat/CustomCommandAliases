@@ -1,0 +1,28 @@
+label: "dirt" # The command will look like this: /dirt
+description: "Receive 64 dirt" # The description you can see when using help
+usage: "/dirt" # The usage that is getting displayed to the user
+aliases: # The aliases the command is known as
+  - "mud"
+  - "filth"
+
+permission: "aliases.example.dirt" # The permission a player requires to use the command
+no-permission-message: "You can't use this command, due to lack of permission" # The message that's getting displayed when the player doesn't have the permission
+error-message: "Something went wrong while executing your command"
+
+# -------( Actions )-------
+# [actionbar] <message> - Send an actionbar to the player
+# [broadcast] <message> - Send a message to all players
+# [console] <command> - Execute a command in console
+# [player] <command> - Execute a command as player
+# [message] <message> - Send a message to a player
+# [sound] <sound> <volume> <pitch> - Play a sound. Sounds can be found. List of sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+# [title] <title> [subtitle] [fade in] [stay] [fade out] Send a title to a player. Underscores will be replaced with spaces.
+# [delay] <amount> - Makes a pause for x amount seconds
+#
+# -------( Placeholders )-------
+# {player} - the player execution the command
+
+execution:
+  - "[player] give {player} minecraft:dirt 32"
+  - "[delay] 10"
+  - "[title] Dirt"

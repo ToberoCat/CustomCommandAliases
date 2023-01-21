@@ -1,0 +1,19 @@
+name: SimpleAliases
+version: '1.2.0'
+main: io.github.toberocat.simplecommandaliases.SimpleAliases
+authors: [ Tobero ]
+description: Create simple comand
+commands:
+  aliases:
+    permission: "simplealiases.command"
+    usage: "/aliases reload"
+    description: "Reload the command map"
+    permission-message: "§cYou aren't allowed to use this command"
+
+permissions:
+  simplealiases.command:
+    description: "Access the alias command"
+    default: op
+  simplealiases.*:
+    children:
+      simplealiases.command: true
